@@ -1,0 +1,140 @@
+a<!DOCTYPE html>
+<html>
+	<head>
+		<title> TweakSite </title>
+		<link rel = "icon" type = "image/png" href = "https://files.catbox.moe/0ipmyk.png"/>
+		<style>
+			body{background-color : #1c1c1c;
+				background-image: "https://w7.pngwing.com/pngs/35/172/png-transparent-pasta-italian-cuisine-pasta-al-dente-espresso-food-pastas-miscellaneous-seafood-gourmet.png";
+				color: #ffffff;
+				padding-left : 100px;
+				padding-right : 100px;}		
+			h1{font-size : 48px;
+				font-family : "Arial";}
+			h3{font-size : 32px;
+				font-family : "Arial"}
+			p{font-family : "Helvectica", sans-serif;
+			  font-size : 20px;}
+			a{font-family : "Arial", serif;
+			  font-size : 24px;}
+			li{font-size : 24px;}
+			td{padding : 14px 8px; font-family : "Helvetica"}
+			table{border-width : 5px; font-size : 22px; text-align : center; border : solid;}
+			caption{font-family : "Comic Sans MS";}
+			button:hover {background-color: lightblue;}
+			input:focus {border-color: red;}
+			a:hover {color : red;}
+			::placeholder{color: thistle}
+
+
+			.highlight{color : #fffb00;}
+			.conclusion {padding: 8px; font-weight: bold;}
+			.form-container {font-size: 24px;}
+        	.error {color: red; font-size: 18px;}
+			.search-box{background-color: #ffffff; border-width: 0; width : 50%;}
+			</style>
+	</head>
+	
+	<body>
+		<center>
+			<a href = "https://www.wikihow.com/Cook-Pasta" title = "From WikiHow"><h1>How to make Pasta🍝</h1></a>
+			
+			<form class="search-container" action: https://pasta.com/#search/q=query>
+				<input style = "background-color : #8B0000;  "type="text" class="search-box" placeholder="Search for any type of Pasta">
+			</form>
+		
+		<br/>
+		<a href = "https://www.freepik.com/premium-photo/spaghetti-dish-white-background_4396472.htm">
+		<img src = "https://files.catbox.moe/62s1k3.png" title = "Pasta" width = 50% height = 100% align = "middle">
+		</a>
+		</center>
+		<p>
+			<div style = "font-size : 24px;	">
+			1. Put the pasta in a <n class = highlight>large bowl</n>. <br>
+			2. Pour water so that it covers all of the pasta. <br>
+			3. Heat until boil.<br>
+			4. Start the preparation of the sauce.<br>
+			5. After the pasta is boiled, strain the water.<br>
+			6. Add the pasta to the sauce you have prepared.<br>
+			7. Mix it up well and add cheese and seasoning.<br>
+			8. Serve with garlic bread.<br>
+			9. <n class = highlight>Enjoy!</n>
+		   </div>
+		   
+		   <br><br> 
+		    <h3 class = highlight>Some types of pasta are:</h3>
+		    <ol>
+		    <li>Penne</li>
+		    <ul>
+				<li highlight>Red Sauce Penne</li>
+				<li>White Sauce Penne</li>
+		    </ul>
+		    <li>Arrabiata</li>
+		    <li>Macaroni</li>
+		    <ul>
+				<li>Macaroni and Cheese</li>
+				<li>Macaroni Salad</li>
+			</ul>
+		    <li>Spaghetti</li>
+		    </ol>
+			
+			<br><br>
+			
+			<center><table border = "border" style = "border-color : #8B0000; border-collapse : collapse">
+				<caption style = "font-size : 32px;">Advantages and Disadvantages of Pasta</caption>
+				<tr> <th>No.</th> <th>Pros</th> <th>Cons</th> </tr>
+				<tr> <th>1.</th> <td>It feels good to eat!</td> <td>You get fatter :(</td>
+				<tr> <th>2.</th> <td>Makes you feel superior to people who can't cook</td> <td>Ingriedients ain't cheap</td>
+				<tr> <tr> <th rowspan = "2">3.</th> <td rowspan = "2">It looks good</td> <td>Looks aren't everything</td> </tr> <td>Deception is evil, ergo, pasta is evil</td> </tr>
+				<tr> <th colspan = "3" style = "padding : 8px">In conclusion, my ass hongry</th>
+			</table></center>
+			<br><br><br><br>
+		</p>
+		
+		<p>
+			<form method="GET" action="" target="_blank" style="font-size: 24px">
+				Do you like Pasta? (Please say yes) </br>
+				<input type="radio" id="yes_pas" name="q" value="YES.html"> <label for="yes_pas">Yes</label><br>
+				<input type="radio" id="no_pas" name="q" value="NO.html"> <label for="no_pas">No</label><br>
+				<input type="button" value="Submit" onclick="redirect()">
+				<input type="button" value="Clear" onclick="clearSelection()">
+			</form>
+			<p id="error-message" class="error"></p>
+			<script>
+				function redirect() {
+					const errorMessage = document.getElementById('error-message');
+					if (document.getElementById('yes_pas').checked) {
+						window.location.href = 'YES.html';}
+					else if (document.getElementById('no_pas').checked){
+						window.location.href = 'NO.html';}
+					else{errorMessage.textContent = 'Select an option!';}
+				}
+
+				function clearSelection() {
+					document.getElementById('yes_pas').checked = false;
+					document.getElementById('no_pas').checked = false;
+					document.getElementById('error-message').textContent = '';
+        		}
+			
+			</script>
+
+			<script type = "text/javascript">
+				function TestFunction() {
+					let x = null;
+					document.write(typeof x);
+				}
+
+				TestFunction();
+			</script>
+			
+			<!-- <form method = "GET" action = "C:\Users\agniv\Documents\Prog\HTML\College\NO.html"> 
+				<label for = "fname">First Name:</label><br>
+				<input type = "text" name = "firstname"><br>
+
+				<label for = "lname">Last Name:</label><br>
+				<input type = "text" name = "lastname"><br> -->
+			</form>
+		</p>
+	</body>
+</html>
+	
