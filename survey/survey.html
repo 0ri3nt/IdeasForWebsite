@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India 2024 Survey</title>
+    <style>
+        body {
+            background-image: url("https://files.catbox.moe/uuz6qe.jpg");
+            background-color: #90ee90;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            backdrop-filter: blur(10px);
+            padding-bottom: 200px;
+        }
+
+        h1{
+            color: #ff0033;
+            font-family : "Cascadia Mono";
+            font-size: 48px;
+            text-shadow: #000000 2px 2px 2px;
+            text-align: center;
+        }
+
+        h2{
+            color: lightblue;
+            font-family : "Segoe UI";
+            font-size: 36px;
+            text-shadow: #000000 1px 1px 1px;
+            text-align: center;
+        }
+        table{
+            border-width: 5px;
+            font-size: 22px;
+            text-align: center;
+        }
+        th{
+            padding: 14px;
+            font-family: "Helvetica";
+            background-color: aqua;
+        }
+        td{
+            padding: 14px 8px;
+            font-family: "Helvetica";
+            background-color: greenyellow;
+        }
+
+        label{
+            font-size : 20px;
+            font-family: "Helvetica";
+        }
+
+        p{
+            font-size : 24px;
+            font-family: "Comic Sans MS";
+        }
+
+        input{
+            font-size : 20px;
+        }
+    .box{
+        width: 90%;
+    }
+    </style>
+</head>
+<body>
+    <header>
+    <img src="https://files.catbox.moe/t78a9l.png" alt="Government of India" style="float: right; 
+    height: 150px; caption-side: bottom;">
+        <h1 style = "background-color: greenyellow; ">Indian Budget Survey 2024</h1>
+    </header>
+    <br>
+    <table border = "solid" style = "border-width : 2px; border-collapse: collapse; margin-left: 25%;">
+        <thead> 
+            <tr>
+                <th>Key Area</th>
+                <th>Allocation (₹ Crore)</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Healthcare</td>
+                <td>30,000</td>
+                <td>Increased funding for public health infrastructure.</td>
+            </tr>
+            <tr>
+                <td>10,000</td>
+                <td>Vaccination and preventive care initiatives.</td>
+            </tr>
+            <tr>
+                <td colspan="2">Education</td>
+                <td>Significant investment in digital education and rural schools.</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <div style = "background-color: greenyellow; padding-bottom: 5px; margin-left: 25%; margin-right: 25%; border: solid; border-color: aqua; ">
+        <h2>Schemes Announced in budgert 2024</h2>
+        <ul style = "font-size : 22px; text-align: center; list-style-type: none;">
+            <li>Pradhan Mantri Health Mission</li>
+            <li>National Education Enhancement Scheme</li>
+            <li>infrastructure Development Fund</li>
+            <li>Renewable Energy Boost Initiative</li>
+        </ul>
+    </div>
+<div style = "width: 50%; background-color: white; margin-inline: 25%; border-radius: 25px; background-color: lightgoldenrodyellow; padding-left: 2%; padding-bottom: 25px;">
+        <form id="feedbackForm" onsubmit="HandleSubmit(); return false;">
+            <h2>Feedback Form</h2>
+            <p>Please fill out the form below to provide your feedback on the budget allocation.</p>
+            <br>
+    
+        <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="gender">Gender :</label>
+            <br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            
+            <br>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            
+            <br>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+            
+            <br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+            <br><br>
+    
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+    
+            <label for="state">State:</label><br>
+            <select id="state" name="state" required>
+                <option value="default" selected disabled>Select a state</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra, Nagar Haveli & Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="other">Other</option>
+            </select><br><br><br>
+            
+            <label for="feedback">Feedback : </label><br>
+            <textarea id="feedback" name="feedback" rows = 5 cols= ""  required></textarea><br><br><br>
+    
+            <input type="submit" value="Submit" style = "border-color: transparent; border-radius: 15px; background-color: yellowgreen; ">
+            <input type="reset" value="Reset" style="border-color: transparent; border-radius: 15px; background-color: orangered; ">
+        </form>
+</div>
+
+    <script>
+        function HandleSubmit() {
+        const name = document.getElementById('name').value;
+        alert(`Thank you, successfully submitted ${name}!`);
+        }
+    </script>
+</body>
+</html>

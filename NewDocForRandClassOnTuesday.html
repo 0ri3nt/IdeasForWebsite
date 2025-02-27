@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example{
+            background-color: white;
+            color: black;
+            padding: 10px;
+            margin: 7px;
+            border: 1px dashed red;
+        }
+
+        .example:hover{
+            background-color: lightblue;
+        }
+
+        button{
+            background-color: white;
+            color: black;
+            padding-inline: 10px;
+            padding-block: 5px;
+            margin: 7px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        button:hover{
+            border-color: white;
+            border :color(from color srgb r g b);
+            background-color: lightblue;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>My First Page</h2>
+        <div class = "example" onclick="redirect()">
+            First semester element
+        </div>
+
+        <div class = "example">
+            Second semester element
+        </div>
+
+        <div class = "example">
+            Third semester element
+        </div>
+
+        <br>
+        
+        <button onclick="change()">Try It!</button>
+        <button onclick="revert()">Change it back!</button>
+        <br>
+        <br>
+        
+        <h1>The Window Object</h1>
+        <p>The Window object represents an open window in a browser.</p>
+        <p id = "demo">Web Clock</p>
+        <button onclick="myTimer()">Start the Clock</button>
+        <button onclick="myStopFunction()">Stop the Clock</button>
+
+
+        <script>
+            
+            function change() {
+                var x = document.getElementsByClassName("example");
+                x[0].style.backgroundColor = "grey";
+                x[0].style.color = "white";
+                x[0].innerHTML = "1st"
+                
+                x[1].style.backgroundColor = "magenta";
+                x[1].style.color = "white";
+                x[1].innerHTML = "2nd"
+                
+                x[2].style.backgroundColor = "orange";
+                x[2].style.color = "white";
+                x[2].innerHTML = "3rd"
+            }
+            
+            function redirect(){
+                var x
+                window.location.href = "https://www.google.com/%s";
+            }
+
+            function revert(){
+                var x = document.getElementsByClassName("example");
+                x[0].style.backgroundColor = "white";
+                x[0].style.color = "black";
+                x[0].innerHTML = "First semester element"
+                
+                x[1].style.backgroundColor = "white";
+                x[1].style.color = "black";
+                x[1].innerHTML = "Second semester element"
+                
+                x[2].style.backgroundColor = "white";
+                x[2].style.color = "black";
+                x[2].innerHTML = "Third semester element"
+            }
+            
+            const myInterval = setInterval(myTimer, 1000);
+            function myTimer() {
+                const date = new Date();
+                document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+            }
+
+            function myStopFunction() {
+                document.getElementById("demo").innerHTML = "Web Clock";
+                clearInterval(myInterval);
+            }
+        </script>
+
+    
+</body>
+</html>
