@@ -1,62 +1,299 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Agnivesh Singh</title>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Defect Detection Model: Project Requirements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <style type="text/css">
-    body{background-color:#29252C;color:white}
-    h1{font-size:72px; font-family:CaskaydiaCove NF; color:#F33535}
-    h2 { font-family: Funnel Display; font-weight: 1000; font-size : 32px; color: #F33535}
-    .actual-text{font-size:30px;font-family:Oswald; padding-inline:10%}
-    .foot {
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-    color: #D8E9F0;
-    background-color: black;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    }
-    hr{border : 2px solid; color: #33425B;}
-    a{color:#F33535; transition: color 0.3s;}
-    a:hover{color:#33425B;transition : color 0.3s}
-    a:active{color: red}
-    p{text-align: justify;text-justify: inter-word; margin-inline: 15%;}
-    .gallery{justify-content: center; justify-items: center; align-items: center;}
-    .gallery-img:hover {
-          transform: scale(1.5);
-          z-index: 2;
-          box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
         }
-  </style>
-  </head>
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #0ea5e9;
+            border-bottom-color: #0ea5e9;
+        }
+        .lifecycle-step {
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .lifecycle-step.active {
+            background-color: #0ea5e9;
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .lifecycle-step:not(.active):hover {
+            background-color: #f0f9ff;
+            transform: translateY(-2px);
+        }
+        .lifecycle-content {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .lifecycle-content.active {
+            display: block;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+    </style>
+    <!-- Chosen Palette: Slate and Sky -->
+    <!-- Application Structure Plan: A thematic, single-page application guiding the user through the requirements and lifecycle of a defect detection project. The structure progresses from foundational needs to advanced concepts, using an interactive flowchart for the core process. This step-by-step approach is more intuitive for a project planning guide than a dashboard, as it mirrors the natural progression of project development, making complex information easier to digest for someone new to the topic. -->
+    <!-- Visualization & Content Choices: Report Info: Project requirements for defect detection. -> Goal: Organize and explain a complex process. -> Viz/Presentation Method: Interactive flowchart built with HTML/CSS and JS for the development lifecycle. Grid-based cards for foundational requirements. -> Interaction: User clicks on a flowchart step to reveal detailed explanatory text below. This focuses attention on one part of the process at a time. -> Justification: Avoids overwhelming the user with a wall of text. The primary "visualization" is the process itself, which is more effective than a data chart for this explanatory purpose. -> Library/Method: Vanilla JS for interaction, Tailwind for layout. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="text-slate-700">
 
-  <body>
-    <center><h1><a href="https://linkedin.com/in/AgniveshSingh/">=>Agnivesh Singh<==</a></h1></center>
-    <hr/>
-    <div class=actual-text>
-      <p>Hello! I am Agnivesh Singh, a student at PES university currently persuing Computer Science. <br> <br>
-      I've always had a habit of tinkering around with the layouts of webpages and open-source software since
-      before I was in college; and now that I'm actually persuing a degree in the subject that has facinated me 
-      forever, I couldn't be more excited!
-      
-      </p>
-        <p style = "display: flex;align-items: center; justify-content: center;"><a style = "text-decoration: none;" href="./AgniveshSinghResume.pdf">My Resume</a></p>
-      </div>
-      <br><hr/>
-    <div style="display:flex;justify-content:center;align-items:center;"><h2>Some of my pictures!</h2></div>
-    <div class="gallery" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
-      <img src="./photo1.jpg" alt="Photo 1" class="gallery-img" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; transition: transform 0.3s;">
-      <img src="./photo2.jpg" alt="Photo 2" class="gallery-img" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; transition: transform 0.3s;">
-      <img src="./photo3.jpg" alt="Photo 3" class="gallery-img" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; transition: transform 0.3s;">
-    </div>
-    <div style="height: 80px;"></div>
-  <div class = foot>
-    © 2025 Agnivesh Singh
-  </div>
-  </body>
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-slate-800">AI Defect Detection</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium border-b-2 border-transparent">Overview</a>
+                        <a href="#foundations" class="nav-link px-3 py-2 text-sm font-medium border-b-2 border-transparent">Foundations</a>
+                        <a href="#lifecycle" class="nav-link px-3 py-2 text-sm font-medium border-b-2 border-transparent">Lifecycle</a>
+                        <a href="#advanced" class="nav-link px-3 py-2 text-sm font-medium border-b-2 border-transparent">Advanced Capabilities</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <section id="overview" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Automating Quality Control with AI</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">This guide outlines the essential requirements for developing a computer vision model that can automatically identify, classify, and analyze defects in manufactured parts.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="text-4xl text-sky-500 mb-3">🎯</div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Identify Defects</h3>
+                    <p class="text-slate-600">The primary goal is to create a model that can distinguish between a "good" part and a "defective" part with high accuracy by analyzing its image.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="text-4xl text-sky-500 mb-3">📊</div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Calculate Probability</h3>
+                    <p class="text-slate-600">The model should output a confidence score or probability, indicating how certain it is that a part is defective, enabling data-driven decisions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="text-4xl text-sky-500 mb-3">📈</div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Analyze Root Cause</h3>
+                    <p class="text-slate-600">Advanced versions can classify the type of defect (e.g., crack, scratch, malformation) and help trace it back to a specific manufacturing process.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="foundations" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Foundational Requirements</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Building a successful model starts with a strong foundation. These are the non-negotiable components you'll need to get started.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="card-icon text-sky-500 mb-4">📷</div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Data Acquisition</h3>
+                    <ul class="space-y-2 text-left text-slate-600 list-disc list-inside">
+                        <li><strong>High-Resolution Camera:</strong> To capture fine details.</li>
+                        <li><strong>Consistent Lighting:</strong> A controlled environment to eliminate shadows and reflections.</li>
+                        <li><strong>Stable Mounting:</strong> To ensure parts are imaged from the same angle and distance every time.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="card-icon text-sky-500 mb-4">📚</div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Dataset Creation</h3>
+                    <ul class="space-y-2 text-left text-slate-600 list-disc list-inside">
+                        <li><strong>Large Volume of Images:</strong> Thousands of images of both ideal and defective parts.</li>
+                        <li><strong>Variety of Defects:</strong> Images covering all possible types of defects.</li>
+                        <li><strong>Accurate Labeling:</strong> Each image must be correctly labeled as 'ideal' or 'defective' (and with the defect type for advanced models).</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="card-icon text-sky-500 mb-4">💻</div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Software & Libraries</h3>
+                    <ul class="space-y-2 text-left text-slate-600 list-disc list-inside">
+                        <li><strong>Programming Language:</strong> Python is the industry standard.</li>
+                        <li><strong>ML Frameworks:</strong> TensorFlow or PyTorch for building the neural network.</li>
+                        <li><strong>Image Processing:</strong> OpenCV for image manipulation and pre-processing tasks.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <div class="card-icon text-sky-500 mb-4">⚙️</div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Computational Hardware</h3>
+                    <ul class="space-y-2 text-left text-slate-600 list-disc list-inside">
+                        <li><strong>GPU (Graphics Processing Unit):</strong> Essential for training deep learning models in a reasonable amount of time.</li>
+                        <li><strong>Sufficient RAM:</strong> To handle large datasets being loaded into memory.</li>
+                        <li><strong>Storage:</strong> Fast storage (SSD) for quick access to the image dataset.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="lifecycle" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Interactive Model Development Lifecycle</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Developing an AI model is a cyclical process. Click on each step below to learn more about what it entails.</p>
+            </div>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-slate-300 -translate-y-1/2"></div>
+                <div id="lifecycle-steps" class="flex flex-col md:flex-row justify-between items-center gap-4 relative">
+                    <div class="lifecycle-step active w-full md:w-auto flex-1 bg-white p-4 rounded-lg shadow-md border border-slate-200 text-center" data-step="1">
+                        <div class="text-sky-500 font-bold text-lg">1</div>
+                        <div class="font-semibold mt-1">Data Preparation</div>
+                    </div>
+                    <div class="lifecycle-step w-full md:w-auto flex-1 bg-white p-4 rounded-lg shadow-md border border-slate-200 text-center" data-step="2">
+                        <div class="text-sky-500 font-bold text-lg">2</div>
+                        <div class="font-semibold mt-1">Model Selection</div>
+                    </div>
+                    <div class="lifecycle-step w-full md:w-auto flex-1 bg-white p-4 rounded-lg shadow-md border border-slate-200 text-center" data-step="3">
+                        <div class="text-sky-500 font-bold text-lg">3</div>
+                        <div class="font-semibold mt-1">Training & Validation</div>
+                    </div>
+                    <div class="lifecycle-step w-full md:w-auto flex-1 bg-white p-4 rounded-lg shadow-md border border-slate-200 text-center" data-step="4">
+                        <div class="text-sky-500 font-bold text-lg">4</div>
+                        <div class="font-semibold mt-1">Deployment</div>
+                    </div>
+                    <div class="lifecycle-step w-full md:w-auto flex-1 bg-white p-4 rounded-lg shadow-md border border-slate-200 text-center" data-step="5">
+                        <div class="text-sky-500 font-bold text-lg">5</div>
+                        <div class="font-semibold mt-1">Monitoring</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="lifecycle-content-container" class="mt-8 bg-white p-8 rounded-lg shadow-inner border border-slate-200 min-h-[200px]">
+                <div id="content-1" class="lifecycle-content active fade-in">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Step 1: Data Collection & Preparation</h3>
+                    <p class="text-slate-600">This is the most critical phase. You collect thousands of images using your controlled setup. These images are then cleaned, resized to a uniform dimension, and potentially augmented (e.g., rotated, flipped) to artificially increase dataset size. Finally, you split the data into training, validation, and testing sets.</p>
+                </div>
+                <div id="content-2" class="lifecycle-content">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Step 2: Model Selection</h3>
+                    <p class="text-slate-600">You don't need to build a model from scratch. The best approach is to use a pre-trained Convolutional Neural Network (CNN) architecture, such as ResNet, MobileNet, or EfficientNet. This technique, called "transfer learning," leverages a model that has already learned to recognize features from millions of images, and you simply fine-tune it for your specific task. This saves enormous amounts of time and computational resources.</p>
+                </div>
+                <div id="content-3" class="lifecycle-content">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Step 3: Training & Validation</h3>
+                    <p class="text-slate-600">The model is "trained" by feeding it the labeled training images. It learns to associate visual patterns with the labels ('ideal' or 'defective'). During training, you periodically check its performance on the validation set, which it hasn't seen before. This helps you tune parameters (like learning rate) and prevent the model from simply memorizing the training data, a problem known as overfitting.</p>
+                </div>
+                <div id="content-4" class="lifecycle-content">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Step 4: Deployment</h3>
+                    <p class="text-slate-600">Once you're satisfied with the model's performance on the test set, it's time to deploy it. This means integrating it into the manufacturing line. The model runs on a computer connected to the camera, analyzing images in real-time. When it detects a defect, it can trigger an alarm, send a signal to a robotic arm to remove the part, or log the event in a quality control system.</p>
+                </div>
+                <div id="content-5" class="lifecycle-content">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Step 5: Monitoring & Retraining</h3>
+                    <p class="text-slate-600">The job isn't done after deployment. You must monitor the model's performance in the real world. Over time, new types of defects may appear, or manufacturing processes might change. Periodically, you'll need to retrain the model with new data to ensure it remains accurate and reliable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Advanced Capabilities: Beyond Detection</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">A basic defect detection model is powerful, but you can extend its capabilities to provide deeper insights for your operations.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Level 2: Defect Classification</h3>
+                    <p class="text-slate-600 mb-4">Instead of a simple "defective/not defective" output, the model can be trained to identify the specific *type* of defect. This requires a more detailed dataset where defective parts are labeled with categories like "scratch," "dent," "crack," or "discoloration."</p>
+                    <p class="font-semibold text-slate-800">Benefit:</p>
+                    <p class="text-slate-600">This provides granular data for quality control teams, helping them understand which types of defects are most common.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Level 3: Root Cause Analysis</h3>
+                    <p class="text-slate-600 mb-4">By correlating the classified defect data with manufacturing process data (e.g., machine ID, operator, time of day, material batch), you can build a system that suggests the probable cause. For example, if "scratches" consistently appear from a specific machine, it flags that machine for maintenance.</p>
+                    <p class="font-semibold text-slate-800">Benefit:</p>
+                    <p class="text-slate-600">This shifts the focus from simply detecting defects to proactively preventing them, saving significant time and resources.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 mt-20">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            <p>&copy; 2025 AI in Manufacturing Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    e.target.classList.add('active');
+                });
+            });
+
+            const lifecycleStepsContainer = document.getElementById('lifecycle-steps');
+            const lifecycleSteps = lifecycleStepsContainer.querySelectorAll('.lifecycle-step');
+            const contentContainer = document.getElementById('lifecycle-content-container');
+
+            lifecycleStepsContainer.addEventListener('click', (e) => {
+                const stepElement = e.target.closest('.lifecycle-step');
+                if (!stepElement) return;
+
+                const stepNumber = stepElement.dataset.step;
+
+                lifecycleSteps.forEach(step => step.classList.remove('active'));
+                stepElement.classList.add('active');
+
+                contentContainer.querySelectorAll('.lifecycle-content').forEach(content => {
+                    content.classList.remove('active', 'fade-in');
+                });
+                
+                const activeContent = document.getElementById(`content-${stepNumber}`);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                    setTimeout(() => activeContent.classList.add('fade-in'), 10);
+                }
+            });
+        });
+    </script>
+</body>
 </html>
+
