@@ -1,51 +1,48 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title> TweakSite </title>
-		<link rel = "icon" type = "image/png" href = "https://files.catbox.moe/0ipmyk.png"/>
+		<link rel = "icon" type = "image/png" href = "sources/skull.png"/>
 		<style>
-			body{background-color : #1c1c1c;
-				background-image: "https://w7.pngwing.com/pngs/35/172/png-transparent-pasta-italian-cuisine-pasta-al-dente-espresso-food-pastas-miscellaneous-seafood-gourmet.png";
-				color: #ffffff;
-				padding-left : 100px;
-				padding-right : 100px;}		
+        body {
+            background-color: #1c1c1c;
+            background-image: url("./scroll.png");
+            color: #ffffff;
+            padding-inline: 15%;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			backdrop-filter: blur(7px);
+            background-attachment: scroll;
+		}	
 			h1{font-size : 48px;
 				font-family : "Arial";}
 			h3{font-size : 32px;
 				font-family : "Arial"}
 			p{font-family : "Helvectica", sans-serif;
 			  font-size : 20px;}
-			a{font-family : "Arial", serif;
-			  font-size : 24px;}
 			li{font-size : 24px;}
 			td{padding : 14px 8px; font-family : "Helvetica"}
 			table{border-width : 5px; font-size : 22px; text-align : center; border : solid;}
 			caption{font-family : "Comic Sans MS";}
-			button:hover {background-color: lightblue;}
-			input:focus {border-color: red;}
-			a:hover {color : red;}
-			::placeholder{color: thistle}
+			input[type="button"]{border : none; padding : 5px 15px; transition-duration: 0.2s; border-radius: 15px;}
+			input[type="button"]:hover{background-color: darkblue;}
 
-
+			a:hover {color : red; transition-duration: 0.2s;}
+			.text-link{font-family : "Helvectica", sans-serif;font-size : 20px; transition-duration: 0.2s;}
 			.highlight{color : #fffb00;}
 			.conclusion {padding: 8px; font-weight: bold;}
 			.form-container {font-size: 24px;}
         	.error {color: red; font-size: 18px;}
-			.search-box{background-color: #ffffff; border-width: 0; width : 50%;}
+			.search-box{color: white; border-width: 0; width: 10%;}
+			.search-box:hover{width:15%; height: 25%;}
 			</style>
 	</head>
 	
 	<body>
 		<center>
-			<a href = "https://www.wikihow.com/Cook-Pasta" title = "From WikiHow"><h1>How to make Pasta🍝</h1></a>
-			
-			<form class="search-container" action: https://pasta.com/#search/q=query>
-				<input style = "background-color : #8B0000;  "type="text" class="search-box" placeholder="Search for any type of Pasta">
-			</form>
-		
-		<br/>
+			<a class = title-link; href = "https://www.wikihow.com/Cook-Pasta" title = "From WikiHow"><h1>How to make Pasta🍝</h1></a>		
 		<a href = "https://www.freepik.com/premium-photo/spaghetti-dish-white-background_4396472.htm">
-		<img src = "https://files.catbox.moe/62s1k3.png" title = "Pasta" width = 50% height = 100% align = "middle">
+		<img src = "sources/pasta.png" title = "Pasta" width = 50% height = 100% align = "middle">
 		</a>
 		</center>
 		<p>
@@ -86,14 +83,14 @@ a<!DOCTYPE html>
 				<tr> <th>1.</th> <td>It feels good to eat!</td> <td>You get fatter :(</td>
 				<tr> <th>2.</th> <td>Makes you feel superior to people who can't cook</td> <td>Ingriedients ain't cheap</td>
 				<tr> <tr> <th rowspan = "2">3.</th> <td rowspan = "2">It looks good</td> <td>Looks aren't everything</td> </tr> <td>Deception is evil, ergo, pasta is evil</td> </tr>
-				<tr> <th colspan = "3" style = "padding : 8px">In conclusion, my ass hongry</th>
+				<tr> <th colspan = "3" style = "padding : 8px">In conclusion, my ass hongry (Another <a href="index.html">dumbass</a> thing)</th>
 			</table></center>
 			<br><br><br><br>
 		</p>
 		
 		<p>
 			<form method="GET" action="" target="_blank" style="font-size: 24px">
-				Do you like Pasta? (Please say yes) </br>
+				Do you like Pasta? (Please say <a class = text-link; href="music_review2.html">ye</a>s, otherwise, count your days.)</br>
 				<input type="radio" id="yes_pas" name="q" value="YES.html"> <label for="yes_pas">Yes</label><br>
 				<input type="radio" id="no_pas" name="q" value="NO.html"> <label for="no_pas">No</label><br>
 				<input type="button" value="Submit" onclick="redirect()">
@@ -115,26 +112,8 @@ a<!DOCTYPE html>
 					document.getElementById('no_pas').checked = false;
 					document.getElementById('error-message').textContent = '';
         		}
-			
 			</script>
-
-			<script type = "text/javascript">
-				function TestFunction() {
-					let x = null;
-					document.write(typeof x);
-				}
-
-				TestFunction();
-			</script>
-			
-			<!-- <form method = "GET" action = "C:\Users\agniv\Documents\Prog\HTML\College\NO.html"> 
-				<label for = "fname">First Name:</label><br>
-				<input type = "text" name = "firstname"><br>
-
-				<label for = "lname">Last Name:</label><br>
-				<input type = "text" name = "lastname"><br> -->
 			</form>
 		</p>
 	</body>
 </html>
-	
